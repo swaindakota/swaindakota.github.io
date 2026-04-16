@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "5968G2XF9P.com.readable.app"
+        ],
+        "components": [
+          {
+            "/": "/app/*",
+            "comment": "Open all paths under /app/ in the Readable app"
+          }
+        ]
+      }
+    ]
+  }
+}
