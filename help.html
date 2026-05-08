@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Tutorial - Readable</title>
+  <meta name="description" content="Help articles for Readable, the book tracking app. How streaks work, importing from Goodreads or StoryGraph, custom shelves, book clubs, and more.">
+  <meta name="author" content="Dakota Swain">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Help & Tutorial - Readable">
+  <meta property="og:description" content="Step-by-step guides for getting the most out of Readable: streaks, goals, imports, book clubs, journals, and Pro features.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Readable">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Help & Tutorial - Readable">
+  <meta name="twitter:description" content="Step-by-step guides for getting the most out of Readable.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #FAF7F2;
+      color: #2D1B0E;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #7C5035;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #5A3825;
+    }
+
+    .site-header {
+      border-bottom: 1px solid #E8E0D6;
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .site-header .brand {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #7C5035;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .site-header .brand:hover {
+      color: #5A3825;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: #2D1B0E;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: #8C7A6A;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      margin-bottom: 28px;
+      color: #4A3728;
+    }
+
+    .toc {
+      background: #FFFFFF;
+      border: 1px solid #E8E0D6;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .toc h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: #2D1B0E;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #7C5035;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .toc ul li {
+      padding: 4px 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+
+    .toc ul li a {
+      text-decoration: none;
+    }
+
+    .toc ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 540px) {
+      .toc ul { columns: 1; }
+    }
+
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 24px;
+    }
+
+    section h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #2D1B0E;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    section .lead {
+      font-size: 15px;
+      color: #6B5340;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: #2D1B0E;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #4A3728;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul li, ol li {
+      color: #4A3728;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    ul li strong, ol li strong, p strong {
+      color: #2D1B0E;
+      font-weight: 600;
+    }
+
+    code, .kbd {
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 13.5px;
+      background: #F0E8DC;
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: #5A3825;
+    }
+
+    .callout {
+      background: #FFF6E8;
+      border-left: 3px solid #C4862A;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      color: #5A3825;
+      font-size: 14.5px;
+    }
+
+    .callout p strong {
+      color: #2D1B0E;
+    }
+
+    .callout--info {
+      background: #EEF1F4;
+      border-left-color: #6A8FAF;
+    }
+
+    .callout--info p {
+      color: #2A4A66;
+    }
+
+    .pro-tag {
+      display: inline-block;
+      background: #2D1B0E;
+      color: #FAF7F2;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: 2px;
+      text-transform: uppercase;
+    }
+
+    .feature-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px;
+      font-size: 14.5px;
+    }
+
+    .feature-table th, .feature-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #E8E0D6;
+      vertical-align: top;
+    }
+
+    .feature-table th {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 600;
+      color: #2D1B0E;
+      background: #F5EDE3;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .feature-table td {
+      color: #4A3728;
+    }
+
+    .feature-table td.feature-name {
+      font-weight: 600;
+      color: #2D1B0E;
+      width: 36%;
+    }
+
+    .contact-block {
+      background: #FFFFFF;
+      border: 1px solid #E8E0D6;
+      border-radius: 10px;
+      padding: 18px 22px;
+    }
+
+    .contact-block p {
+      margin-bottom: 6px;
+    }
+
+    .contact-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .site-footer {
+      border-top: 1px solid #E8E0D6;
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #8C7A6A;
+    }
+
+    .site-footer .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .site-footer .footer-links a {
+      margin: 0 12px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      section h2 { font-size: 20px; }
+      .container { padding: 28px 18px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="./" class="brand" aria-label="Readable home" title="Back to Readable home">Readable</a>
+  </header>
+
+  <main class="container">
+    <h1>Help &amp; Tutorial</h1>
+    <p class="last-updated">Last updated: 8 May 2026</p>
+    <p class="intro">Quick guides for the things readers ask about most. If you can&rsquo;t find what you need here, email <a href="mailto:Readablesupport@gmail.com">Readablesupport@gmail.com</a> &mdash; we reply within 24 hours.</p>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#getting-started">Getting started</a></li>
+        <li><a href="#reading-sessions">Reading sessions</a></li>
+        <li><a href="#streaks">Streaks &amp; freezes</a></li>
+        <li><a href="#goals">Reading goals</a></li>
+        <li><a href="#shelves">Shelves &amp; library</a></li>
+        <li><a href="#import-goodreads">Import from Goodreads</a></li>
+        <li><a href="#import-storygraph">Import from StoryGraph</a></li>
+        <li><a href="#clubs-vs-readalongs">Book Clubs vs Read-Alongs</a></li>
+        <li><a href="#reviews-vs-journal">Reviews vs Journal</a></li>
+        <li><a href="#series">Series</a></li>
+        <li><a href="#privacy">Privacy controls</a></li>
+        <li><a href="#pro">Readable Pro</a></li>
+        <li><a href="#account">Account &amp; sign-in</a></li>
+        <li><a href="#delete-account">Delete your account</a></li>
+        <li><a href="#contact">Contact support</a></li>
+      </ul>
+    </nav>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="getting-started">
+      <h2>Getting started</h2>
+      <p class="lead">If you just installed Readable, the first three things to do.</p>
+
+      <h3>1. Add your first book</h3>
+      <p>Tap the <strong>Search</strong> tab at the bottom. Type a title, author, or ISBN. Tap a result, then tap <strong>Add to Library</strong>. Pick a shelf (Want to Read, Reading, Completed, or Did Not Finish).</p>
+
+      <h3>2. Start a reading session</h3>
+      <p>From your library, tap a book that&rsquo;s on your <em>Reading</em> shelf, then tap the timer icon. Enter the page you&rsquo;re starting on, then tap <strong>Start</strong>. When you stop, enter the page you ended on. Readable saves the time, pages read, and updates your reading speed.</p>
+
+      <h3>3. Set a goal (optional but recommended)</h3>
+      <p>Open <strong>Goals</strong> from the home screen. Pick a goal type (yearly, monthly, daily reading time, daily pages, or finish a specific book). We track progress automatically.</p>
+
+      <div class="callout callout--info">
+        <p><strong>Want a guided walkthrough?</strong> Open <strong>Profile &rarr; Help &amp; Tutorial &rarr; Take the tour</strong> any time. It&rsquo;s a 90-second carousel hitting these basics again.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="reading-sessions">
+      <h2>Reading sessions</h2>
+      <p class="lead">Three ways to log reading.</p>
+
+      <h3>Timer (most accurate)</h3>
+      <ol>
+        <li>Open the book from your library.</li>
+        <li>Tap the timer icon.</li>
+        <li>Enter your starting page and tap <strong>Start</strong>.</li>
+        <li>When you stop reading, tap <strong>End Session</strong> and enter the ending page.</li>
+      </ol>
+      <p>Readable calculates duration, pages read, and pages-per-hour. The session adds to your daily streak and any active reading goals.</p>
+
+      <h3>Manual page update (no timer)</h3>
+      <p>If you read offline or just want to jot down your progress, open the book and tap <strong>Update progress</strong> below the progress bar. Enter your current page. This counts towards yearly book/page goals but doesn&rsquo;t add to your streak (no time recorded).</p>
+
+      <h3>Mark as completed</h3>
+      <p>From the book&rsquo;s detail screen, swipe its shelf to <strong>Completed</strong>, or use the <strong>Move to shelf</strong> menu. We record the finish date and offer to prompt for a star rating + review.</p>
+
+      <div class="callout">
+        <p><strong>Anti-cheat note:</strong> Sessions over 24 hours, with negative duration, or with the end page lower than the start page are rejected at the database level. Genuine long reads (4+ hours) are fine.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="streaks">
+      <h2>Streaks &amp; freezes</h2>
+      <p class="lead">A streak is the number of consecutive days you&rsquo;ve logged a reading session.</p>
+
+      <h3>How streaks count</h3>
+      <ul>
+        <li>A streak day requires at least one logged reading session that day, in your local time zone.</li>
+        <li>Manual page updates and marking books complete do <em>not</em> count &mdash; the streak measures actual reading sessions only.</li>
+        <li>Streaks reset to 0 if you skip a day. The end of the day is midnight in your phone&rsquo;s time zone.</li>
+      </ul>
+
+      <h3>Milestones</h3>
+      <p>Hit a milestone day count (7, 30, 100, 365) to earn celebrations and, with Pro, additional <strong>streak freezes</strong>. Open <strong>Profile &rarr; Streak Detail</strong> to see your current streak, the next milestone, and a 30-day grid of read/missed/frozen days.</p>
+
+      <h3>Streak freezes <span class="pro-tag">Pro</span></h3>
+      <p>A freeze auto-uses on a missed day so your streak doesn&rsquo;t break. Pro members get up to two freezes per month. They auto-apply &mdash; you don&rsquo;t need to do anything when you miss a day.</p>
+      <p>Freezes only apply once you have at least one. If you&rsquo;re out of freezes, the streak breaks normally.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="goals">
+      <h2>Reading goals</h2>
+      <p class="lead">Five goal types. Pick one or run several at once.</p>
+
+      <table class="feature-table">
+        <thead>
+          <tr><th>Type</th><th>Tracks</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="feature-name">Books per year</td><td>Number of books finished in the calendar year</td></tr>
+          <tr><td class="feature-name">Books per month</td><td>Number of books finished in a given month</td></tr>
+          <tr><td class="feature-name">Daily reading time</td><td>Minutes read each day. Resets at local midnight</td></tr>
+          <tr><td class="feature-name">Daily pages</td><td>Pages read each day. Resets at local midnight</td></tr>
+          <tr><td class="feature-name">Finish a specific book</td><td>Pages remaining in one chosen book by a target date</td></tr>
+        </tbody>
+      </table>
+
+      <p>Open <strong>Goals</strong> from the home tab to create or edit one. Progress updates after every reading session.</p>
+
+      <div class="callout">
+        <p><strong>Note on time zones:</strong> Daily goals roll over at midnight in your phone&rsquo;s local time zone. Session timestamps are stored in UTC and displayed locally, so a session that crosses midnight counts towards the day it started in.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="shelves">
+      <h2>Shelves &amp; library</h2>
+      <p class="lead">Default shelves come with the app. Custom shelves let you organise however you want.</p>
+
+      <h3>Default shelves</h3>
+      <p>Every book sits on exactly one of: <strong>Want to Read</strong>, <strong>Reading</strong>, <strong>Completed</strong>, or <strong>Did Not Finish</strong>. The shelf determines how the book shows up in goal tracking and your public profile.</p>
+
+      <h3>Custom shelves <span class="pro-tag">Pro</span></h3>
+      <p>Group books by mood, decade, vibe, theme &mdash; anything. A book can be on multiple custom shelves at once (it stays on its single default shelf too). Examples: &ldquo;Comfort Reads&rdquo;, &ldquo;Owned but Unread&rdquo;, &ldquo;Top of 2026&rdquo;.</p>
+      <ol>
+        <li>From your Library, tap <strong>Manage Shelves</strong>.</li>
+        <li>Tap <strong>Add Shelf</strong>, give it a name, pick a colour and icon.</li>
+        <li>Open any book and tap <strong>Add to Shelf</strong> to drop it on the new shelf.</li>
+      </ol>
+
+      <h3>Free plan library cap</h3>
+      <p>Free accounts can add up to <strong>15 books per calendar year</strong>. Books rolled over from previous years stay in your library and don&rsquo;t count against the current year&rsquo;s cap. Pro removes the cap entirely.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="import-goodreads">
+      <h2>Import from Goodreads</h2>
+      <p class="lead">Move your full Goodreads library &mdash; ratings, reviews, shelves, dates &mdash; into Readable. Two stages: export from Goodreads, then import in the app.</p>
+
+      <h3>Step 1 &mdash; Export your data from Goodreads</h3>
+      <p><strong>You need a desktop or laptop computer for this.</strong> The Goodreads mobile app does not support exports &mdash; the function only exists on the web. If you don&rsquo;t have a computer handy, the easiest path is to log in via the desktop site on your phone&rsquo;s browser (use &ldquo;Request Desktop Site&rdquo; in Safari).</p>
+      <ol>
+        <li>Open <a href="https://www.goodreads.com" target="_blank" rel="noopener">goodreads.com</a> in a desktop browser and sign in to your account.</li>
+        <li>In the top navigation, click <strong>My Books</strong>.</li>
+        <li>Look at the <strong>left sidebar</strong>. Scroll down past your shelves and bookcase categories until you reach the <strong>Tools</strong> section.</li>
+        <li>Click <strong>Import and export</strong>. (Lowercase &lsquo;e&rsquo;. Easy to miss because it sits near the bottom of the sidebar.)</li>
+        <li>On the page that opens, find the <strong>Export Library</strong> button under the Export heading and click it.</li>
+        <li>Wait for the export to finish. Goodreads shows a small status message; this can take anywhere from a few seconds to several minutes depending on how many books you have. <strong>Don&rsquo;t close the tab while it processes.</strong></li>
+        <li>When the export finishes, a download link appears on the same page underneath the Export Library button. Click it to download a file named <code>goodreads_library_export.csv</code>.</li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Don&rsquo;t open the file in Excel before importing.</strong> Excel re-saves the CSV with extra quote marks around ISBN values that can break the import. If you want to peek at the file, use Numbers, Google Sheets, or just leave it alone &mdash; Readable handles the format Goodreads ships natively.</p>
+      </div>
+
+      <h3>Step 2 &mdash; Get the CSV onto your phone</h3>
+      <p>Pick whichever transfer method is easiest for you:</p>
+      <ul>
+        <li><strong>AirDrop (Mac to iPhone):</strong> right-click the file in Finder, choose Share &gt; AirDrop, pick your phone. Tap &ldquo;Save to Files&rdquo; on the iPhone.</li>
+        <li><strong>Email it to yourself:</strong> attach the CSV in any email and send it to an address you can read on your phone. Open the email, tap the attachment, choose &ldquo;Save to Files&rdquo;.</li>
+        <li><strong>iCloud Drive or Files-app cloud (Dropbox, Google Drive):</strong> drop the file into your cloud folder on the desktop. It syncs to the iPhone&rsquo;s Files app within seconds.</li>
+        <li><strong>Direct download on phone browser:</strong> if you logged into goodreads.com on the phone in desktop mode, tapping the download link saves it straight to Files.</li>
+      </ul>
+
+      <h3>Step 3 &mdash; Import into Readable</h3>
+      <ol>
+        <li>Open Readable on your phone.</li>
+        <li>Go to <strong>Profile &rarr; Import Library</strong>.</li>
+        <li>Tap <strong>Choose CSV File</strong>. The iOS file picker opens.</li>
+        <li>Navigate to wherever you saved the file (the Files app, an email attachment, your iCloud Drive). Tap <code>goodreads_library_export.csv</code>.</li>
+        <li>Readable detects the Goodreads format automatically by reading the column headers, then begins matching each book against the Google Books catalogue. Progress shows on screen.</li>
+      </ol>
+
+      <h3>What gets imported</h3>
+      <p>Your Goodreads CSV contains 31 columns of data. Readable uses the ones that map to features we support:</p>
+      <ul>
+        <li><strong>Title, author, ISBN, ISBN-13</strong> &mdash; we match each book against our catalogue, preferring exact ISBN matches when available, falling back to title + author.</li>
+        <li><strong>My Rating</strong> &mdash; copied across as 1&ndash;5 stars. <strong>Books you didn&rsquo;t rate (rating value 0 in the CSV) come over without a rating</strong>, the same way they were in Goodreads.</li>
+        <li><strong>Exclusive Shelf</strong> &mdash; this is your primary shelf in Goodreads. Mapping: <em>read</em> &rarr; Completed, <em>currently-reading</em> &rarr; Reading, <em>to-read</em> &rarr; Want to Read, <em>did-not-finish</em> &rarr; Did Not Finish.</li>
+        <li><strong>Date Read &amp; Date Added</strong>.</li>
+        <li><strong>My Review</strong> &mdash; long-form reviews come over as private journal entries on the matching book. You can publish individual entries as public reviews after import.</li>
+      </ul>
+
+      <h3>What doesn&rsquo;t transfer</h3>
+      <ul>
+        <li><strong>Custom Goodreads shelves</strong> (e.g. &ldquo;5-star-faves&rdquo;, &ldquo;owned-but-unread&rdquo;). Goodreads exports them in a column called &ldquo;Bookshelves&rdquo; but the shelf <em>model</em> doesn&rsquo;t map cleanly to ours &mdash; we use a single primary shelf plus separate custom shelves (Pro). Re-create the ones you care about as Readable custom shelves after the import lands.</li>
+        <li><strong>Highlights, quotes, and reading notes</strong> &mdash; Goodreads doesn&rsquo;t export these.</li>
+        <li><strong>Friend connections</strong> &mdash; you&rsquo;ll need to re-follow people on Readable.</li>
+        <li><strong>Books with no ISBN match</strong> in our catalogue &mdash; rare, but if you have very obscure self-published titles they may skip. The import shows you a list of any skipped rows so you can add them manually.</li>
+        <li><strong>Read Count, Private Notes, BCID, owned-copy metadata.</strong> We don&rsquo;t have surfaces for these yet.</li>
+      </ul>
+
+      <div class="callout callout--info">
+        <p><strong>Re-running is safe.</strong> You can run the import as many times as you want. Existing books in your library are matched by ISBN and updated &mdash; not duplicated. New books in a later export are added as fresh entries.</p>
+      </div>
+
+      <h3>Troubleshooting</h3>
+      <p><strong>&ldquo;I clicked Export Library and nothing happened.&rdquo;</strong> Goodreads&rsquo; export button doesn&rsquo;t download immediately &mdash; it queues the file. Check back on the same page after 30&ndash;60 seconds and the download link should appear. Larger libraries (1,000+ books) can take a few minutes.</p>
+      <p><strong>&ldquo;The download link won&rsquo;t appear / the page seems frozen.&rdquo;</strong> Refresh the Import and Export page. If the export was queued, the link will be there. If not, click Export Library again.</p>
+      <p><strong>&ldquo;I can&rsquo;t find the Import and Export link in the sidebar.&rdquo;</strong> It&rsquo;s near the bottom under a header called &ldquo;Tools.&rdquo; You may need to scroll past the list of your shelves to see it.</p>
+      <p><strong>&ldquo;The CSV came as a .zip file.&rdquo;</strong> Goodreads occasionally bundles exports inside a .zip when delivered via email rather than direct download. Unzip it on your computer first &mdash; the inner file will be the CSV you need.</p>
+      <p><strong>&ldquo;Some books didn&rsquo;t match.&rdquo;</strong> If a Goodreads book doesn&rsquo;t have an ISBN listed (often the case for self-published titles or some translated editions), our matcher falls back to title + author. If both sides agree closely, it matches. If not, the row is reported as skipped at the end of the import. You can search for and add those books manually.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="import-storygraph">
+      <h2>Import from StoryGraph</h2>
+      <p class="lead">If you keep your shelves on The StoryGraph, the import works the same way as Goodreads &mdash; just with a different export procedure.</p>
+
+      <h3>Step 1 &mdash; Export your data from StoryGraph</h3>
+      <p>StoryGraph&rsquo;s export lives behind a single button on the Manage Account page. Two ways to reach it:</p>
+      <ol>
+        <li>Open <a href="https://app.thestorygraph.com/manage-account" target="_blank" rel="noopener">app.thestorygraph.com/manage-account</a> directly in a desktop browser, or via the StoryGraph app: tap your profile picture &rarr; the gear icon (settings) &rarr; <strong>Manage Account</strong>.</li>
+        <li>Scroll down the page until you reach the <strong>Manage Your Data</strong> section.</li>
+        <li>Click the <strong>Export StoryGraph Library</strong> button.</li>
+        <li>StoryGraph generates and downloads a CSV file containing your full library.</li>
+      </ol>
+
+      <h3>Step 2 &mdash; Get the CSV onto your phone</h3>
+      <p>Same options as Goodreads: AirDrop from a Mac, email it to yourself, save to iCloud Drive / Files, or download directly on the phone if you used a desktop browser there.</p>
+
+      <h3>Step 3 &mdash; Import into Readable</h3>
+      <p>Same flow as Goodreads: open Readable, go to <strong>Profile &rarr; Import Library</strong>, tap <strong>Choose CSV File</strong>, and select the StoryGraph export. Readable detects the StoryGraph format automatically (different column headers from Goodreads).</p>
+
+      <h3>What gets imported</h3>
+      <ul>
+        <li><strong>Title, author, ISBN/UID</strong> &mdash; StoryGraph stores either an ISBN or its own internal UID; we match on whichever is present.</li>
+        <li><strong>Star Rating</strong> &mdash; StoryGraph supports half-stars (3.5, 4.5 etc.). We preserve the half-star precision.</li>
+        <li><strong>Read Status</strong> &mdash; <em>read</em> &rarr; Completed, <em>currently-reading</em> &rarr; Reading, <em>to-read</em> &rarr; Want to Read, <em>did not finish</em> &rarr; Did Not Finish.</li>
+        <li><strong>Date Read</strong>.</li>
+        <li><strong>Reviews</strong> &mdash; brought across as private journal entries by default, same as Goodreads imports.</li>
+      </ul>
+
+      <h3>What doesn&rsquo;t transfer</h3>
+      <ul>
+        <li><strong>StoryGraph mood and pace tags</strong> (e.g. &ldquo;adventurous&rdquo;, &ldquo;reflective&rdquo;, &ldquo;fast-paced&rdquo;). We have our own discovery system that uses different categorisation.</li>
+        <li><strong>Content warnings you&rsquo;ve added or voted on.</strong> Readable has its own community content-warning system &mdash; you can re-flag warnings on each book after import.</li>
+        <li><strong>Custom tags / shelves</strong> beyond the four read statuses. Re-create them as Readable custom shelves (Pro) after import.</li>
+        <li><strong>Reading challenges and stats history</strong>. Stats are derived in Readable from your imported sessions/dates &mdash; not from StoryGraph&rsquo;s aggregate history.</li>
+      </ul>
+
+      <div class="callout callout--info">
+        <p><strong>Half-star ratings preserved.</strong> Unlike Goodreads (whole stars only), StoryGraph supports half-stars. Readable preserves them &mdash; a 4.5-star StoryGraph rating shows up as 4.5 stars in Readable.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="clubs-vs-readalongs">
+      <h2>Book Clubs vs Read-Alongs</h2>
+      <p class="lead">Both let you read a book together with discussion. Different organisers, different feel.</p>
+
+      <table class="feature-table">
+        <thead>
+          <tr><th></th><th>Book Clubs</th><th>Read-Alongs</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">Run by</td>
+            <td>Any reader (Pro to host, free to join)</td>
+            <td>Verified authors only</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Best for</td>
+            <td>Reader-to-reader discussion of any book</td>
+            <td>Reading a new book with the author present</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Structure</td>
+            <td>Multiple rounds &mdash; pick a book, set a target date, discuss, finish, pick the next</td>
+            <td>Chapter-by-chapter checkpoints with author commentary</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Discussion</td>
+            <td>Free-form discussion threads + polls</td>
+            <td>Comments at each chapter checkpoint</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Joining a club or read-along</h3>
+      <p>Open the <strong>Social</strong> tab and switch to <strong>Clubs</strong> or <strong>Read-Alongs</strong>. Browse what&rsquo;s active and tap <strong>Join</strong>. You&rsquo;ll see new discussion threads in your notifications.</p>
+
+      <h3>Hosting a book club <span class="pro-tag">Pro</span></h3>
+      <p>From the Clubs tab, tap <strong>Create</strong>. Name your club, pick the first book, set a target completion date, and invite friends or make it public. Members read together and post discussion threads as they go.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="reviews-vs-journal">
+      <h2>Reviews vs Journal</h2>
+      <p class="lead">Two places to write about a book. They serve different purposes.</p>
+
+      <h3>Reviews</h3>
+      <p>Public by default. Reviews appear on your profile and in friends&rsquo; feeds. They include a star rating, optional content tags (&ldquo;funny&rdquo;, &ldquo;cried&rdquo;, &ldquo;informative&rdquo;), and a body. Other users can like and comment.</p>
+      <p>Think of reviews as the Letterboxd-style public log: short, opinionated, written for an audience.</p>
+
+      <h3>Journal entries</h3>
+      <p>Private by default. Journal entries are tied to a specific book and can be dated to a specific point in your read (e.g., &ldquo;Halfway through, page 184&rdquo;). They support longer-form thoughts. With Pro, journal entries sync across devices via the cloud; without Pro they&rsquo;re stored on the current device only.</p>
+      <p>Use the journal as a private reading diary &mdash; favourite passages, half-thoughts, references to look up later.</p>
+
+      <h3>Which one should I use?</h3>
+      <p>Most readers do both: a journal entry every few days while reading, and one polished review when they finish.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="series">
+      <h2>Series</h2>
+      <p class="lead">Track multi-book series so you don&rsquo;t lose your place across volumes.</p>
+
+      <p>Every book&rsquo;s detail screen shows a <strong>Series Timeline</strong> if the book is part of a known series. The timeline shows every book in order, marks which ones you&rsquo;ve read, and links to the next book.</p>
+
+      <h3>Series are community-edited</h3>
+      <p>Any signed-in reader can <strong>add a book to an existing series</strong> if it&rsquo;s missing. From the book&rsquo;s detail screen, tap <strong>Add to Series</strong>. Pick the series and the book&rsquo;s position number.</p>
+      <p>Only the original creator of a series can <strong>reorder</strong> books or <strong>remove</strong> them &mdash; that prevents vandalism on community-built lists.</p>
+
+      <h3>Continue the Series</h3>
+      <p>The Discovery tab surfaces &ldquo;Continue the Series&rdquo; for books you&rsquo;ve recently completed. We look up the next position in each series automatically and recommend it.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="privacy">
+      <h2>Privacy controls</h2>
+      <p class="lead">You decide what&rsquo;s public, what&rsquo;s friends-only, and what stays private to you.</p>
+
+      <h3>Profile visibility</h3>
+      <p>From <strong>Profile &rarr; Settings &rarr; Privacy</strong>, set your profile to <strong>Public</strong>, <strong>Friends Only</strong>, or <strong>Private</strong>.</p>
+      <ul>
+        <li><strong>Public</strong>: anyone can see your profile, library, reviews, and posts.</li>
+        <li><strong>Friends Only</strong>: only people who follow you (and you follow them back) can see your full profile. Public posts you make are still visible to everyone.</li>
+        <li><strong>Private</strong>: nothing is visible to anyone but you. You can still follow others and read public content.</li>
+      </ul>
+
+      <h3>Per-book privacy <span class="pro-tag">Pro</span></h3>
+      <p>Pro members can mark individual books as private regardless of overall profile visibility. Tap a book&rsquo;s detail screen, then the privacy toggle &mdash; the book stays in your library and counts towards your goals, but won&rsquo;t appear on your public profile or in friends&rsquo; activity.</p>
+
+      <h3>Blocking</h3>
+      <p>Block any user from their profile via the three-dot menu. Blocking hides their content from you and prevents them from seeing yours or interacting with you. Blocks are mutual-direction and effective immediately.</p>
+
+      <h3>Reporting content</h3>
+      <p>Every post, review, comment, and profile has a Report option in the three-dot menu. Reports are confidential &mdash; the reported user is not told who submitted the report. We act on reports within 24 hours.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="pro">
+      <h2>Readable Pro</h2>
+      <p class="lead">Optional subscription &mdash; A$6.99/month or A$49.99/year. 14-day free trial for new subscribers.</p>
+
+      <p>Pro features (matching what&rsquo;s shown on the in-app paywall):</p>
+      <ul>
+        <li><strong>Unlimited library</strong>. Free plan caps at 15 books per year; Pro removes the cap.</li>
+        <li><strong>Streak freezes</strong>. Up to two per month, so a busy day can&rsquo;t break a long run.</li>
+        <li><strong>Your entire library on your public profile</strong>. The free plan shows only the 10 most recently active books on your public profile.</li>
+        <li><strong>Per-book privacy</strong>. Keep any title off your public profile while still tracking it.</li>
+        <li><strong>Deep reading analytics</strong>. Pace, genre mix, year-over-year trends, your year in books.</li>
+        <li><strong>Cloud-synced reading journal</strong>. Journal entries sync across every device you sign in on.</li>
+        <li><strong>Host your own book clubs</strong>. With real-time discussions, polls, and member progress tracking.</li>
+        <li><strong>Seven premium themes, custom app icons, and video posts</strong>.</li>
+      </ul>
+
+      <h3>Managing your subscription</h3>
+      <p>Subscriptions are processed and billed by Apple via your Apple ID. To cancel or change plan: open the iOS <strong>Settings</strong> app, tap your name at the top, then <strong>Subscriptions &rarr; Readable</strong>. Cancellations take effect at the end of the current billing period.</p>
+      <p>To restore a purchase on a new device: sign in with the same Apple ID and tap <strong>Restore</strong> on the Readable paywall. Your Pro status will sync within seconds.</p>
+
+      <h3>Refunds</h3>
+      <p>Refunds are handled by Apple, not by us. Submit a refund request at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="account">
+      <h2>Account &amp; sign-in</h2>
+
+      <h3>Sign-in methods</h3>
+      <p>Readable supports email + password and Sign in with Apple. Pick whichever you prefer. You can change which Apple ID is associated with the app via iOS Settings.</p>
+
+      <h3>Forgot password</h3>
+      <p>On the sign-in screen, tap <strong>Forgot Password</strong>. We email a reset link to the address on file. The link expires after 1 hour.</p>
+
+      <h3>Multiple devices</h3>
+      <p>Sign in on as many devices as you like. Reading sessions sync to the cloud automatically. There is a per-account device limit of 5 active devices &mdash; signing in on a 6th will sign out the oldest one.</p>
+
+      <h3>Username vs display name</h3>
+      <p>Your <strong>username</strong> is the unique <code>@handle</code> people use to find you. Your <strong>display name</strong> is the name shown on your profile and reviews. Both are editable in <strong>Profile &rarr; Edit</strong>.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="delete-account">
+      <h2>Delete your account</h2>
+      <p>You can permanently delete your account at any time:</p>
+      <ol>
+        <li>Open <strong>Profile &rarr; Settings</strong>.</li>
+        <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
+        <li>Confirm. Deletion is immediate and irreversible.</li>
+      </ol>
+      <p>Deleting your account permanently removes:</p>
+      <ul>
+        <li>Your profile, username, and personal info.</li>
+        <li>Your full library, reading sessions, and reading history.</li>
+        <li>All posts, reviews, comments, and journal entries you&rsquo;ve created.</li>
+        <li>Your followers, following lists, and blocks.</li>
+      </ul>
+      <p>Aggregate book metadata (which a deleted account once added) and anonymised popularity counters used by Discovery are retained for service operation, with your identifying data stripped.</p>
+      <p>If you have an active Pro subscription, cancel it through Apple (<strong>iOS Settings &rarr; Apple ID &rarr; Subscriptions</strong>) <em>before</em> deleting your account. Deleting the account does not cancel an Apple subscription.</p>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+
+    <section id="contact">
+      <h2>Contact support</h2>
+      <p>Still need help? Email us &mdash; we read every message and reply within 24 hours.</p>
+      <div class="contact-block">
+        <p>Email: <a href="mailto:Readablesupport@gmail.com">Readablesupport@gmail.com</a></p>
+        <p>Response time: within 24 hours, every day</p>
+        <p>Built in Brisbane, Australia by Dakota Swain</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="./">Home</a>
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p>&copy; 2026 Dakota Swain. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
